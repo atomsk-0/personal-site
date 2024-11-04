@@ -13,11 +13,14 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script src="https://unpkg.com/alpinejs" defer></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="max-w-7xl mx-auto">
+			<slot />
+		</div>
 	</body>
 </html>
 <style is:global>
@@ -34,7 +37,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		@apply bg-primary-background;
 	}
 	code {
 		font-family:
@@ -46,5 +49,9 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+
+	.nav-button {
+		@apply underline decoration-wavy text-white border border-dashed border-transparent hover:border-white/60 hover:scale-105 rounded-md p-0.5 duration-300 ease-out;
 	}
 </style>
