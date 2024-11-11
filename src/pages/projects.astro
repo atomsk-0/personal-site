@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout title="atomsk-0">
+    <div class="grid grid-cols-2 gap-4 mt-8">
+        <ProjectCard name="Sensum.Framework" liveUrl='' gitUrl='https://github.com/atomsk-0/Sensum.Framework' description='C# Library to simulate "Growtopia" game client player fully headlessly, was used to make botting tools for the game or other automations.' archived logo=`<div class="rounded-md p-3 bg-black/60"><svg class="w-6 h-6 text-white select-none hover:cursor-pointer transition-transform duration-100 ease-linear" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M9.3 1.2C7.2 1.7 5 2.5 4.5 2.9c-.6.5-1.7 2.7-2.5 5-.8 2.2-1.1 4.4-.7 4.8.5.5 4.9 1 9.9 1.3l9 .5L11 21l-3.5-6.5c-.5 5.4 0 7.6.7 8.3 1.1 1.1 2.2 1.1 5.8.1 2.5-.7 5-1.7 5.6-2.3.6-.6 1.6-2.6 2.3-4.4.6-1.7.9-3.9.6-4.7-.4-1.2-2.4-1.5-9.8-1.5l-9.2-.1c3.9-3 5.9-4.6 7-5.4 1.9-1.4 2.1-1.3 4 1.7 1.7 2.8 2 3 2.3 1.3.2-1.1.1-3-.2-4.3-.3-1.2-1.2-2.3-2-2.5-.8-.2-3.1.1-5.3.5z"/></svg></div>`/>
+        <ProjectCard archived={false} name="Moonlit" liveUrl='' gitUrl='https://github.com/atomsk-0/Moonlit' description='cross-platform memory scanning and modification tool designed to be fast and lightweight, written in c# [WIP]' logo=`<div class="rounded-md p-3 bg-black/60 min-w-12 items-center text-center"><span class="text-white font-bold">M</span></div>`/>
+        <ProjectCard archived={false} name="Cervo" liveUrl='' gitUrl='https://github.com/atomsk-0/Cervo' description='cross-platform ui framework designed to be fast and lightweight, written in c# [WIP]' logo=`<div class="rounded-md p-3 bg-black/60 min-w-12 items-center text-center"><span class="text-white font-bold">C</span></div>`/>
+        <ProjectCard archived={false} name="NativeFiledialogNET" liveUrl='' gitUrl='https://github.com/atomsk-0/NativeFiledialogNET' description='Lightweight C# bindings for nativefiledialog-extended library' logo=`<div class="rounded-md p-3 bg-black/60 min-w-12 items-center text-center"><span class="text-white font-bold">N</span></div>`/>
+    </div>
+</Layout>
