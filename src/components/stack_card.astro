@@ -1,0 +1,17 @@
+---
+interface Props {
+	name: string;
+	description: string;
+    logo: string;
+}
+
+const { name, description, logo } = Astro.props;
+---
+
+<div class="p-2 flex flex-row space-x-4 items-center rounded-md bg-secondary-background border border-primary-background hover:bg-white/10 hover:border-white/50 duration-300 ease-out">
+    <div set:html={logo}></div>
+    <div class="flex flex-col">
+        <h1 class="text-white font-medium text-lg">{name}</h1>
+        <p class="text-white/50">{description}</p>
+    </div>
+</div>
