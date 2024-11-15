@@ -10,12 +10,12 @@ import ProjectCard from '../components/project_card.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>atomsk-0</title>
 	</head>
-	<body class="max-w-7xl mx-auto my-8 bg-primary-background px-8 xl:px-0">
-		<div class="flex flex-col sm:flex-row sm:space-x-[68px] w-full">
+	<body class="max-w-7xl mx-auto my-8 px-8 xl:px-0 bg-primary-background">
+		<div class="flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-[68px] w-full">
 			<div class="flex flex-col">
 				<div class="flex flex-col max-w-xl">
 					<h1 class="text-white font-bold text-2xl text-center sm:text-left">About Me</h1>
-					<div class="flex flex-row items-center space-x-4">
+					<div class="flex flex-col sm:flex sm:flex-row items-center sm:space-x-4">
 						<a class="min-w-16 mt-2" href="https://github.com/atomsk-0">
 							<img class="rounded-md w-16 h-16" src="https://avatars.githubusercontent.com/atomsk-0?size=64"/>
 						</a>
@@ -26,9 +26,12 @@ import ProjectCard from '../components/project_card.astro';
 			<div class="flex flex-col">
 				<div class="flex flex-col max-w-xl">
 					<h1 class="text-white font-bold text-2xl text-center sm:text-left">Socials</h1>
-					<div class="flex flex-row space-x-4 mt-2 justify-center items-center sm:justify-start">
+					<div class="flex flex-row space-x-2 mt-2 justify-center items-center sm:justify-start">
 						<a href="https://github.com/atomsk-0"  class="rounded-md bg-white/10 text-white/50 p-2 hover:scale-105 hover:bg-blue-600 hover:text-white duration-300 ease-out">
 							<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87"/><path d="M9 20.027c-3 .973-5.5 0-7-3"/></g></svg>
+						</a>
+						<a href="https://dribbble.com/atomsk0"  class="rounded-md bg-white/10 text-white/50 p-2 hover:scale-105 hover:bg-blue-600 hover:text-white duration-300 ease-out">
+							<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 32 32"><path fill="currentColor" d="M16 1.667C8.084 1.667 1.667 8.084 1.667 16S8.084 30.333 16 30.333S30.333 23.916 30.333 16S23.916 1.667 16 1.667zm9.534 6.565a12.262 12.262 0 0 1 2.767 7.618c-3.23-.656-6.14-.783-8.776-.38a57.828 57.828 0 0 0-1.125-2.412c4.03-1.516 6.097-3.277 7.134-4.826zm-1.58-1.608c-.876 1.658-3.19 3.232-6.563 4.476c-1.532-2.86-3.114-5.3-4.387-7.033c.96-.24 1.964-.37 2.997-.37c3.03 0 5.81 1.103 7.955 2.927zM10.847 4.83c1.09 1.442 2.75 3.91 4.415 6.968c-3.686 1.073-8.03 1.677-11.28 1.585a12.346 12.346 0 0 1 6.866-8.552zM3.696 16c0-.147.006-.293.01-.44c.313.014.633.02.96.02c3.465 0 7.755-.646 11.485-1.765l.14-.044c.355.705.698 1.432 1.034 2.176c-.516.146-1.022.314-1.518.507c-3.547 1.375-6.512 3.895-9.03 7.678a12.25 12.25 0 0 1-3.08-8.13zm4.692 9.656c2.31-3.574 5.002-5.924 8.21-7.167c.515-.2 1.048-.37 1.593-.514c1.206 2.996 2.167 6.205 2.56 9.373a12.271 12.271 0 0 1-4.75.952a12.22 12.22 0 0 1-7.612-2.646zm14.414.59c-.446-2.94-1.32-5.895-2.413-8.686c2.315-.28 4.88-.117 7.74.485a12.319 12.319 0 0 1-5.328 8.2z"/></svg>
 						</a>
 					</div>
 				</div>
@@ -53,14 +56,34 @@ import ProjectCard from '../components/project_card.astro';
 	
 		<div class="flex flex-col mt-8">
 			<div class="flex flex-col">
-				<h1 class="text-white font-bold text-2xl">Projects</h1>
-				<p class="text-white/50 font-lg">Most my projects are private and/or scrapped but here some public ones</p>
+				<h1 class="text-white font-bold text-2xl text-center sm:text-left">Projects</h1>
+				<p class="text-white/50 font-lg text-center sm:text-left">Most my projects are private and/or scrapped but here some public ones</p>
 			</div>
 			<div class="flex flex-col sm:grid sm:grid-cols-2 gap-6 mt-2">
 				<ProjectCard name="Sensum.Framework" liveUrl='' gitUrl='https://github.com/atomsk-0/Sensum.Framework' description='C# Library to simulate "Growtopia" game client player fully headlessly, was used to make botting tools for the game or other automations.' archived logo=`<div class="rounded-md p-3 bg-black/60"><svg class="w-6 h-6 text-white select-none hover:cursor-pointer transition-transform duration-100 ease-linear" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M9.3 1.2C7.2 1.7 5 2.5 4.5 2.9c-.6.5-1.7 2.7-2.5 5-.8 2.2-1.1 4.4-.7 4.8.5.5 4.9 1 9.9 1.3l9 .5L11 21l-3.5-6.5c-.5 5.4 0 7.6.7 8.3 1.1 1.1 2.2 1.1 5.8.1 2.5-.7 5-1.7 5.6-2.3.6-.6 1.6-2.6 2.3-4.4.6-1.7.9-3.9.6-4.7-.4-1.2-2.4-1.5-9.8-1.5l-9.2-.1c3.9-3 5.9-4.6 7-5.4 1.9-1.4 2.1-1.3 4 1.7 1.7 2.8 2 3 2.3 1.3.2-1.1.1-3-.2-4.3-.3-1.2-1.2-2.3-2-2.5-.8-.2-3.1.1-5.3.5z"/></svg></div>`/>
 				<ProjectCard archived={false} name="Moonlit" liveUrl='' gitUrl='https://github.com/atomsk-0/Moonlit' description='cross-platform memory scanning and modification tool designed to be fast and lightweight, written in c#' logo=`<div class="rounded-md p-3 bg-black/60 min-w-12 items-center text-center"><span class="text-white font-bold">M</span></div>`/>
 				<ProjectCard archived={false} name="Cervo" liveUrl='' gitUrl='https://github.com/atomsk-0/Cervo' description='cross-platform ui framework designed to be fast and lightweight, written in c#' logo=`<div class="rounded-md p-3 bg-black/60 min-w-12 items-center text-center"><span class="text-white font-bold">C</span></div>`/>
 				<ProjectCard archived={false} name="NativeFiledialogNET" liveUrl='' gitUrl='https://github.com/atomsk-0/NativeFiledialogNET' description='Lightweight C# bindings for nativefiledialog-extended library' logo=`<div class="rounded-md p-3 bg-black/60 min-w-12 items-center text-center"><span class="text-white font-bold">N</span></div>`/>
+			</div>
+		</div>
+		<div class="flex flex-col mt-8">
+			<div class="flex flex-col">
+				<h1 class="text-white font-bold text-2xl text-center sm:text-left">Designs</h1>
+				<p class="text-white/50 font-lg text-center sm:text-left">My design works</p>
+			</div>
+			<div class="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex sm:flex-row sm:space-x-4 mt-2">
+				<div class="max-w-64 flex flex-col justify-between bg-secondary-background rounded-md min-h-52 border border-primary-background hover:border-white duration-300 ease-out">
+					<img class="rounded-lg max-w-64" src="design-0.png"/>
+					<div class="w-full items-center text-center py-2">
+						<h1 class="text-white font-medium">Riple - Bandwidth sharing app</h1>
+					</div>
+				</div>
+				<div class="max-w-64 flex flex-col justify-between bg-secondary-background rounded-md min-h-52 border border-primary-background hover:border-white duration-300 ease-out">
+					<img class="rounded-lg max-w-64" src="design-1.png"/>
+					<div class="w-full items-center text-center py-2">
+						<h1 class="text-white font-medium">Riple - Bandwidth sharing app</h1>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
